@@ -1,3 +1,5 @@
+from sklearn import metrics
+
 def cmat_to_psuedo_y_true_and_y_pred(cmat):
   """
   Convert a confusion matrix to psuedo y_true and y_pred
@@ -11,3 +13,15 @@ def cmat_to_psuedo_y_true_and_y_pred(cmat):
       y_true.extend([true_class] * elm)
       y_pred.extend([pred_class] * elm)
   return y_true, y_pred
+
+
+def accuracy_score(cmat, **kwargs):
+  """
+  Accuracy classification score.
+  :param cmat: Confusion matrix
+  :param kwargs:
+  :return: accuracy
+  """
+  # Create psuedo y_true and y_pred
+  psuedo_y_true, psuedo_y_pred = cmat_to_psuedo_y_true_and_y_pred(cmat)
+  return metrics.accuracy_score(psuedo_y_true, psuedo_y_pred, **kwargs)
