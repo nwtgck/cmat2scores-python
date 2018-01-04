@@ -47,3 +47,15 @@ def recall_score(cmat, **kwargs):
   # Create psuedo y_true and y_pred
   psuedo_y_true, psuedo_y_pred = cmat_to_psuedo_y_true_and_y_pred(cmat)
   return metrics.recall_score(psuedo_y_true, psuedo_y_pred, **kwargs)
+
+
+def f1_score(cmat, **kwargs):
+  """
+  F1 classification score.
+  :param cmat: Confusion matrix
+  :param kwargs:
+  :return: f1
+  """
+  # Create psuedo y_true and y_pred
+  psuedo_y_true, psuedo_y_pred = cmat_to_psuedo_y_true_and_y_pred(cmat)
+  return metrics.f1_score(psuedo_y_true, psuedo_y_pred, **kwargs)
