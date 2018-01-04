@@ -39,6 +39,21 @@ class Cmat2scoresTest(unittest.TestCase):
   expect = metrics.accuracy_score(y_test, y_pred)
   assert(actual == expect)
 
+  # Precision test
+  actual = cmat2scores.precision_score(cmat, average='macro')
+  expect = metrics.precision_score(y_test, y_pred, average='macro')
+  assert (actual == expect)
+
+  # Recall test
+  actual = cmat2scores.recall_score(cmat, average='macro')
+  expect = metrics.recall_score(y_test, y_pred, average='macro')
+  assert (actual == expect)
+
+  # F1 test
+  actual = cmat2scores.f1_score(cmat, average='macro')
+  expect = metrics.f1_score(y_test, y_pred, average='macro')
+  assert (actual == expect)
+
 
 def suite():
   suite = unittest.TestSuite()
