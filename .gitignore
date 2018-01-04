@@ -1,0 +1,4 @@
+/.venv
+/.idea
+/cmat2scores.egg-info
+__pycache__/
