@@ -10,7 +10,7 @@ sys.path.append('./tests')
 
 setup(
     name='cmat2scores',
-    version='0.1.0-SNAPSHOT',
+    version='1.0.0',
     description='Calculate accuracy, precision, recall f-measure from confusion matrix',
     author='Ryo Ota',
     author_email='nwtgck@gmail.com',
