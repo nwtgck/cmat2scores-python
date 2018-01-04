@@ -7,9 +7,13 @@ cmat = np.array([
   [0, 0, 3]
 ])
 
-accuracy = cmat2scores.accuracy_score(cmat)
-recall   = cmat2scores.recall_score(cmat)
+# Calc accuracy
+accuracy       = cmat2scores.accuracy_score(cmat)
 
-print(accuracy)
-print(recall)
+# Calc recall
+# (NOTE: You can use all argument which are defined in sklearn.metrics.recall_score())
+recall   = cmat2scores.recall_score(cmat, average='macro')
+
+print('Accuracy:', accuracy)
+print('Recall:', recall)
 
