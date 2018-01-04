@@ -24,10 +24,12 @@ install:
   - pip install coveralls
 
 script:
+  # Run test with coverage
   - coverage run --source=cmat2scores setup.py test
 
-#  - pip3 install --upgrade git+https://github.com/nwtgck/cmat2scores-python.git@$TRAVIS_BRANCH
-#  - python examples/example1.py
+  # Working-test of examples
+  - pip3 install --upgrade git+https://github.com/nwtgck/cmat2scores-python.git@$TRAVIS_BRANCH
+  - python examples/example1.py
 
 after_success:
   - coveralls
