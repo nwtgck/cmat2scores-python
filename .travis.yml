@@ -2,11 +2,10 @@
 
 language: python
 
-# TODO: Recomment-out the versions
 python:
-#  - 3.4
+  - 3.4
   - 3.5
-#  - 3.6
+  - 3.6
 
 addons:
   apt:
