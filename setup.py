@@ -11,7 +11,7 @@ sys.path.append('./tests')
 setup(
     name='cmat2scores',
     version='0.1.0-SNAPSHOT',
-    description='Calculate accuracy, precision, recall f-measure from confusion matrix ',
+    description='Calculate accuracy, precision, recall f-measure from confusion matrix',
     author='Ryo Ota',
     author_email='nwtgck@gmail.com',
     install_requires=['scikit-learn', 'numpy', 'SciPy'],
