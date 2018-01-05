@@ -27,9 +27,6 @@ script:
   # Run test with coverage
   - coverage run --source=cmat2scores setup.py test
 
-  # TODO: remove
-  - echo $TRAVIS_COMMIT
-
   # Working-test of examples
   - pip3 install --upgrade git+https://github.com/nwtgck/cmat2scores-python.git@$TRAVIS_COMMIT
   - python examples/example1.py
