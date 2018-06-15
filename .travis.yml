@@ -20,12 +20,15 @@ before_install:
   - pip install -U pip setuptools wheel # (from: https://github.com/dnouri/nolearn/blob/master/.travis.yml)
 
 install:
-  - travis_wait travis_retry pip install -r requirements.txt # (from: https://github.com/dnouri/nolearn/blob/master/.travis.yml)
-  - pip install coveralls
+  - pip install pipenv
 
 script:
+  # Pipenv installation
+  - pipenv install
+  - pipenv install --dev
+
   # Run test with coverage
-  - coverage run --source=cmat2scores setup.py test
+  - pipenv run coverage run --source=cmat2scores setup.py test
 
   # Working-test of examples
   - pip3 install --upgrade git+https://github.com/nwtgck/cmat2scores-python.git@$TRAVIS_COMMIT
