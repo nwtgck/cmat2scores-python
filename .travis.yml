@@ -21,6 +21,8 @@ before_install:
 
 install:
   - pip install pipenv
+  # FIXME: Should not install toml (this package will be used in "pip install --upgrade git+https:...") but should not force users to install toml
+  - pip install toml
 
 script:
   # Pipenv installation
