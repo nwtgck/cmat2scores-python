@@ -4,10 +4,15 @@
 
 Calculate accuracy, precision, recall and f-measure from confusion matrix
 
-## Installation
+## Installation (pip)
 
 ```bash
 pip3 install git+https://github.com/nwtgck/cmat2scores-python
+```
+## Installation (Pipenv)
+
+```bash
+pipenv install git+https://github.com/nwtgck/cmat2scores-python.git@master#egg=cmat2scores
 ```
 
 ## Usage
