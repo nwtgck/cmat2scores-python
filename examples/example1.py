@@ -1,10 +1,11 @@
 import numpy as np
 import cmat2scores
 
+# Confusion matrix
 cmat = np.array([
-  [3, 2, 0],
-  [2, 1, 0],
-  [0, 0, 3]
+  [6, 1, 3],
+  [0, 9, 1],
+  [9, 0, 10]
 ])
 
 # Calculate accuracy 
